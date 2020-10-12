@@ -1,0 +1,50 @@
+{% extends "layout0.html" %}
+
+{% block name %}
+    {{userName}}
+{% endblock %}
+   
+{% block content %}
+
+<div class="bg-img">
+      
+    <header class="container" style="height: 100%;padding-top: 14rem;">
+        <form style="width: 100%;" name="gallery" action="/gallery" method="POST">
+            <div class="form-row" style="height: 100%;">
+              <div class="col-6"  style="padding: 0;background-color: #1c6061; ">
+                <select class="form-control "style="height: 100%; background-color: #1c6061; color:white; font-weight:bold;" name="city" id="country">
+                    <option disabled>Choose a City</option>
+                    {% for city in cities %}
+                      <option  value="{{ city[0] }}">{{city[0]}}</option>
+                    {% endfor %}
+                </select>
+              </div>
+              <div class="col-3" style="padding: 0;">
+                  <button  value="Dog" name="dog" class="btnStyle"  ><i class="fas fa-dog"></i>  Find a dog</button>
+            </div>
+              <div class="col-3" style="padding: 0;">
+                  <button  value="Cat" name="cat" class="btnStyle" ><i class="fas fa-cat"></i>  Find a cat</button>
+            </div>
+            </div>
+          </form>     
+    </header>
+    </div> 
+    <section class="container p-1" >
+        <h2 style="text-align: center;">Pets Available for Adoption</h2>
+        <div class="row cards">
+            {% for row in result %}
+            <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:3%;">
+                <div class="img-thumbnail">
+                  <img class="image" src="{{url_for('static' ,filename = row['imgName'])}}" alt="">
+                  <!-- <div class="image" style="background-image: url('static\\download.jpg');object-fit: cover;" > </div> -->
+                  <form action="/petInfo" method="POST">
+                    <button style="text-align: center;padding-top: 7px;font-size: x-large;font-weight: bold;background-color: transparent;border:none;cursor: pointer;outline: none;" value="{{row['petID']}}" name="pet">{{row["petName"]}}</button>
+                </form>
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+    
+    </section>
+
+{% endblock %}

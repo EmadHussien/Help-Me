@@ -1,0 +1,27 @@
+{% extends "layout0.html" %}
+
+{% block name %}
+    {{userName}}
+{% endblock %}
+   
+{% block content %}
+
+    <section class="container p-1" >
+        <h2 style="text-align: center;">Pets Available for Adoption</h2>
+        <div class="row cards">
+            {% for item in galleryItems %}
+            <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:3%;">
+                <div class="img-thumbnail">
+                  <img class="image" src="{{url_for('static' ,filename = item['imgName'])}}" alt="">
+                  <!-- <div class="image" style="background-image: url('static\\download.jpg');object-fit: cover;" > </div> -->
+                  <form action="/petInfo" method="POST">
+                    <button style="text-align: center;padding-top: 7px;font-size: x-large;font-weight: bold;background-color: transparent;border:none;cursor: pointer;outline: none;" value="{{item['petID']}}" name="pet">{{item["petName"]}}</button>
+                </form>
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+    
+    </section>
+
+{% endblock %}

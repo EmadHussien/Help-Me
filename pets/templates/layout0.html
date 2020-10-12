@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+     
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/static/index1.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+        <!-- <script src="https://kit.fontawesome.com/456e6df11c.js" crossorigin="anonymous"></script> -->
+        
+
+        
+        <title>Help Me</title>
+        <link rel="shortcut icon" href="/static/Care.ico">
+      
+    
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-m navbar-light ">
+
+            <a class="navbar-brand" href="/profile"><i class="fas fa-paw"></i> Help Me</span></a>
+
+            <button style="border: none; color: white;"  aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
+                <span >{% block name %}{% endblock %}</span>
+            </button>
+
+            
+           
+            <div class="collapse navbar-collapse" id="navbar">  
+                    <ul class="navbar-nav ml-auto mt-2">
+                        <li class="nav-item"><a class="nav-link" href="/info" >Account info </a></li>
+                        <li class="nav-item"><a class="nav-link" href="/addpet" >Add pets </a></li>
+                        <li class="nav-item"><a class="nav-link" href="/editPets" >My pets </a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logout" >Log out </a></li>
+                    </ul>
+            </div>
+        </nav>
+
+        
+
+
+       
+        {% block content %}
+        {% endblock %}
+               
+               
+        <script>
+            function validateForm() {
+                var x = document.forms["edit"]["editemail"].value;
+                var y = document.forms["edit"]["editoldpass"].value;
+                var n = document.forms["edit"]["editcity"].value;
+                var o = document.forms["edit"]["editphone"].value;
+                var q = document.forms["edit"]["editaddress"].value;
+                
+            
+              if (x == "" || y== "" || n == "" || o == "" || q == "" ) {
+                alert("fields cannot be empty");
+                return false;
+              }
+              alert("Updated successfully")
+            }
+
+           function validatepet(){
+                var x = document.forms["pets"]["name"].value;
+                var y = document.forms["pets"]["color"].value;
+                var n = document.forms["pets"]["age"].value;
+                var o = document.forms["pets"]["breed"].value;
+                var k = document.forms["pets"]["pic"].value;
+                if (x == "" || y== "" || n == "" || o == "" || k == "" ) {
+                alert("fields cannot be empty");
+                return false;
+                }
+                alert("Added successfully")
+            }
+            
+            function dele(){
+                alert("pet is  deleted successfully")
+            }
+            
+  
+            
+            </script>
+
+
+    </body>
+
+</html>

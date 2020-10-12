@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>Error</title>      
+      <style>
+        html{
+          height: 100%;
+        }
+        body{
+          height: 100%;
+        }
+        img{
+          width: 50%;
+        }
+        
+        @media (max-width: 960px){
+          img{
+          width: 100%;
+        }
+        }
+   
+  
+      </style>
+      </head>
+
+  <body>
+      <img class="image" src="{{url_for('static' ,filename = name)}}" alt="" >      
+
+  </body>
+  </html>

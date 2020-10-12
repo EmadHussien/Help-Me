@@ -1,0 +1,67 @@
+{% extends "layout0.html" %}
+
+{% block name %}
+    {{userName}}
+{% endblock %}
+   
+{% block content %}
+<div class="container">
+
+       
+    <div class="row d-flex justify-content-center" style="margin-top:2%;">
+     <div class="col-md-5" >
+         <div class="img-thumbnail">
+            <img class="image" src="{{url_for('static' ,filename = nameImg)}}" alt="">
+        </div>
+     </div>
+    </div>
+</div>
+
+
+<div class="container " style="margin-top: 2%;">
+    <h2 style="font-weight: bold;color: #4d4751;">{{petinfo[0]["petName"]}}</h2>
+    <hr>
+    <div class="row" style="margin-top: 2%;">
+        <div class=" col-md-6 col-sm-12 ">
+            <label for="">Breed:  {{petinfo[0]["breed"]}}</label>
+        </div>
+        <div class=" col-md-6 col-sm-12 ">
+            <label for="">Type:  {{petinfo[0]["typee"]}}</label>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 2%;">
+        <div class=" col-md-6 col-sm-12 ">
+            <label for="">gender:  {{petinfo[0]["gender"]}}</label>
+        </div>
+        <div class=" col-md-6 col-sm-12 ">
+            <label for="">Color:  {{petinfo[0]["color"]}}</label>
+        </div>
+    </div>
+    <div class="row" style="margin-top:2%">
+        <div class=" col-md-6 col-sm-12 ">
+            <label for="">Age:  {{petinfo[0]["age"]}}</label>
+        </div>
+        <div class=" col-md-6 col-sm-12 ">
+            <label for="">Size:  {{petinfo[0]["size"]}}</label>
+        </div>
+    </div>
+    <h4 style="font-weight: bold;margin-top: 1%;color: #4d4751;">Contact</h4>
+    <hr>            
+    <div class="row" style="margin-top:2%">
+        <div class=" col-md-6 col-sm-12 ">
+            <label for="">Address:  {{ownerinfo[0]["address"]}}</label>
+        </div>
+        <div class=" col-md-6 col-sm-12 ">
+            <label for="">mail: {{ownerinfo[0]["email"]}}</label>
+        </div>
+    </div>
+    <div class="row" style="margin-top:2%">
+        <div class=" col-md-6 col-sm-12 ">
+            <label for="">City: {{ownerinfo[0]["city"]}}</label>
+        </div>
+        <div class=" col-md-6 col-sm-12 ">
+            <label for="">Phone Number: {{ownerinfo[0]["phone"]}}</label>
+        </div>
+    </div>
+
+{% endblock %}
