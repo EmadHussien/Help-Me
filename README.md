@@ -6,7 +6,7 @@ who search for people to adopt pets that they can not keep and people who want t
 all data saved in the database.
 </br>
 
-Features :
+##### Features :
 1. Users can sign up to create an account .
 2. Users can edit their information.
 3. Users can add their pet information.
@@ -15,7 +15,7 @@ Features :
 6. People who want to adopt pets can see all information about pets and pet’s owner
 without signing up.
 
-Technologies : HTML , CSS ,BOOTSTRAP , JAVASCRIPT ,Python (Flask) , Database (Sql).
+##### Technologies : HTML , CSS ,BOOTSTRAP , JAVASCRIPT ,Python (Flask) , Database (Sql).
 
 Here you can see the project : https://youtu.be/dxfuB07qLVQ
 
