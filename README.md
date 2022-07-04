@@ -21,3 +21,5 @@ Here you can see the project : https://youtu.be/dxfuB07qLVQ
 
 [![Open video](https://img.youtube.com/vi/dxfuB07qLVQ/0.jpg)](https://www.youtube.com/watch?v=dxfuB07qLVQ)
 
+##### Database Schema:
+<img src= 'https://user-images.githubusercontent.com/31719363/177174316-a20cab8e-da27-4b37-ad3a-066088743cd4.png' width='860px' />
